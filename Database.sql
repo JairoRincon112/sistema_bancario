@@ -1,9 +1,4 @@
--- CONTROL DE CONCURRENCIA - SCRIPT FINAL (LISTO PARA PGADMIN)
--- Autor: Andrés Rincón
--- Fecha: 2025-10-16
--- Instrucciones: Conéctate a la base de datos 'banco_concurrencia' en pgAdmin y ejecuta este script.
--- Nota: Ejecuta el CREATE DATABASE / DROP DATABASE por separado si lo necesitas; este archivo asume
--- que estás conectado a la base de datos destino.
+-- CONTROL DE CONCURRENCIA - SCRIPT FINAL 
 
 -- =====================
 -- SCHEMA + TABLAS
@@ -309,7 +304,7 @@ $$ LANGUAGE plpgsql;
 -- =====================
 -- 4) Consultas de evidencia (ejecutar manualmente cuando quieras)
 -- =====================
---SELECT * FROM banco.lock_manager ORDER BY created_at DESC LIMIT 100;
---SELECT * FROM banco.timestamp_manager ORDER BY ts_id DESC LIMIT 100;
---SELECT * FROM banco.transferencia ORDER BY created_at DESC LIMIT 100;
---SELECT * FROM banco.cuenta ORDER BY cuenta_id;
+SELECT * FROM banco.lock_manager ORDER BY created_at DESC LIMIT 100;
+SELECT * FROM banco.timestamp_manager ORDER BY ts_id DESC LIMIT 100;
+SELECT * FROM banco.transferencia ORDER BY created_at DESC LIMIT 100;
+SELECT * FROM banco.cuenta ORDER BY cuenta_id;
